@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>0x38B - Thoughts on language learning and more | articles tagged "pelican"</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/theme/css/screen.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/print.css" type="text/css" media="print" />
+    <meta name="generator" content="Pelican" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="ephemeral selected"><a href="/tag/pelican.html">pelican</a></li>
+                <li><a href="">Home</a></li>
+            </ul>
+        </nav>
+        <div class="header_box">
+            <h1><a href="">0x38B - Thoughts on language learning and more</a></h1>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">            <h4 class="date">Nov 21, 2015</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="/moving-to-pelican-and-travis-ci.html" rel="bookmark" title="Permanent Link to &quot;Moving to Pelican and Travis CI&quot;">Moving to Pelican and Travis CI</a>
+                </h2>
+
+                <p>I now build the site with Pelican instead of Hakyll, primarily because a) I know Python, and b) Pelican has a larger community and is simple to get going.
+I followed instructions from <a href="http://kevinyap.ca/2014/06/deploying-pelican-sites-using-travis-ci">Kevin Yap</a> to set up Travis CI. My <code>.travis.yml</code> file looks like so:</p>
+<div class="highlight"><pre><span class="n">language</span><span class="o">:</span> <span class="n">python</span>
+<span class="n">python</span><span class="o">:</span>
+<span class="o">-</span> <span class="s1">&#39;3.5&#39;</span>
+<span class="n">install</span><span class="o">:</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="na">txt</span>
+<span class="n">before</span><span class="o">-</span><span class="n">script</span><span class="o">:</span>
+<span class="o">-</span> <span class="n">git</span> <span class="n">submodule</span> <span class="n">init</span>
+<span class="o">-</span> <span class="n">git</span> <span class="n">submodule</span> <span class="n">update</span>
+<span class="n">script</span><span class="o">:</span> <span class="o">./</span><span class="n">generate</span><span class="o">.</span><span class="na">sh</span> <span class="n">deploy</span>
+<span class="n">env</span><span class="o">:</span>
+  <span class="n">global</span><span class="o">:</span>
+  <span class="o">-</span> <span class="n">secure</span><span class="o">:</span> <span class="o">(</span><span class="n">Encrypted</span> <span class="n">github</span> <span class="n">key</span> <span class="n">here</span><span class="o">)</span>
+</pre></div>
+
+
+<p>I edited Kevin's <a href="https://github.com/iKevinY/iKevinY.github.io/blob/src/generate.sh">generate.sh</a> to push to my Github user page's master branch. Hopefully it works...</p>
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="/moving-to-pelican-and-travis-ci.html">posted at 00:00</a>
+                    &nbsp;&middot;&nbsp;<a href="/category/blog.html" rel="tag">Blog</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="/tag/pelican.html" class="tags selected">pelican</a>
+                    &nbsp;<a href="/tag/travis-cl.html" class="tags">travis cl</a>
+                </div>
+		<a href="/moving-to-pelican-and-travis-ci.html#disqus_thread">Click to read and post comments</a>
+            </article>
+
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>
