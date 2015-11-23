@@ -40,10 +40,11 @@ I followed instructions from <a href="http://kevinyap.ca/2014/06/deploying-pelic
 <span class="n">before</span><span class="o">-</span><span class="n">script</span><span class="o">:</span>
 <span class="o">-</span> <span class="n">git</span> <span class="n">submodule</span> <span class="n">init</span>
 <span class="o">-</span> <span class="n">git</span> <span class="n">submodule</span> <span class="n">update</span>
-<span class="n">script</span><span class="o">:</span> <span class="o">./</span><span class="n">generate</span><span class="o">.</span><span class="na">sh</span> <span class="n">deploy</span>
+<span class="n">script</span><span class="o">:</span> <span class="n">pelican</span> <span class="o">-</span><span class="n">s</span> <span class="n">pelicanconf</span><span class="o">.</span><span class="na">py</span>
+<span class="n">after_success</span><span class="o">:</span> <span class="o">./</span><span class="n">generate</span><span class="o">.</span><span class="na">sh</span> <span class="n">deploy</span>
 <span class="n">env</span><span class="o">:</span>
   <span class="n">global</span><span class="o">:</span>
-  <span class="o">-</span> <span class="n">secure</span><span class="o">:</span> <span class="o">(</span><span class="n">Encrypted</span> <span class="n">github</span> <span class="n">key</span> <span class="n">here</span><span class="o">)</span>
+  <span class="o">-</span> <span class="n">secure</span><span class="o">:</span> <span class="o">(</span><span class="n">Encrypted</span> <span class="n">Github</span> <span class="n">key</span> <span class="n">here</span><span class="o">)</span>
 </pre></div>
 
 
